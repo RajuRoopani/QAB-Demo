@@ -1,0 +1,197 @@
+{
+    "LIBCHECKER": [
+      {
+        "id": 1,
+        "familyname": "INV",
+        "error_code": "LBDB-607",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "1,2",
+        "percentage" : "50"
+      },
+      {
+        "id": 2,
+        "familyname": "BUF",
+        "error_code": "LBDB-607",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "1,2,4",
+        "percentage" : "75"
+      },
+      {
+        "id": 3,
+        "familyname": "NOT",
+        "error_code": "LBDB-608",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "1",
+        "percentage" : "25"
+      },
+      {
+        "id": 4,
+        "familyname": "SDFFQ",
+        "error_code": "LBDB-609",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "",
+        "percentage" : "0"
+      },
+      {
+        "id": 1,
+        "familyname": "INV",
+        "error_code": "LBDB-607",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "1,2",
+        "percentage" : "50"
+      },
+      {
+        "id": 2,
+        "familyname": "BUF",
+        "error_code": "LBDB-607",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "1,2,4",
+        "percentage" : "75"
+      },
+      {
+        "id": 3,
+        "familyname": "NOT",
+        "error_code": "LBDB-608",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "1",
+        "percentage" : "25"
+      },
+      {
+        "id": 4,
+        "familyname": "SDFFQ",
+        "error_code": "LBDB-609",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "1,2,4",
+        "percentage" : "75"
+      },
+      {
+        "id": 1,
+        "familyname": "INV",
+        "error_code": "LBDB-607",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "",
+        "percentage" : "0"
+      },
+      {
+        "id": 2,
+        "familyname": "BUF",
+        "error_code": "LBDB-607",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "1,2,4",
+        "percentage" : "75"
+      },
+      {
+        "id": 3,
+        "familyname": "NOT",
+        "error_code": "LBDB-608",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "1",
+        "percentage" : "25"
+      },
+      {
+        "id": 4,
+        "familyname": "SDFFQ",
+        "error_code": "LBDB-609",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "",
+        "percentage" : "0"
+      },
+      {
+        "id": 1,
+        "familyname": "INV",
+        "error_code": "LBDB-607",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "1,2",
+        "percentage" : "50"
+      },
+      {
+        "id": 2,
+        "familyname": "BUF",
+        "error_code": "LBDB-607",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "1,2,4",
+        "percentage" : "75"
+      },
+      {
+        "id": 3,
+        "familyname": "NOT",
+        "error_code": "LBDB-608",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "1",
+        "percentage" : "25"
+      },
+      {
+        "id": 4,
+        "familyname": "SDFFQ",
+        "error_code": "LBDB-609",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "1,2,4",
+        "percentage" : "75"
+      },
+      {
+        "id": 1,
+        "familyname": "INV",
+        "error_code": "LBDB-607",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "1,2",
+        "percentage" : "50"
+      },
+      {
+        "id": 2,
+        "familyname": "BUF",
+        "error_code": "LBDB-607",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "1,2,4",
+        "percentage" : "75"
+      },
+      {
+        "id": 3,
+        "familyname": "NOT",
+        "error_code": "LBDB-608",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "1",
+        "percentage" : "25"
+      },
+      {
+        "id": 4,
+        "familyname": "SDFFQ",
+        "error_code": "LBDB-609",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "1,2,4",
+        "percentage" : "75"
+      },
+      {
+        "id": 1,
+        "familyname": "INV",
+        "error_code": "LBDB-607",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "1,2",
+        "percentage" : "50"
+      },
+      {
+        "id": 2,
+        "familyname": "BUF",
+        "error_code": "LBDB-607",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "1,2,4",
+        "percentage" : "75"
+      },
+      {
+        "id": 3,
+        "familyname": "NOT",
+        "error_code": "LBDB-608",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "1",
+        "percentage" : "25"
+      },
+      {
+        "id": 4,
+        "familyname": "SDFFQ",
+        "error_code": "LBDB-609",
+        "all_drives": "1,2,4,8",
+        "fail_drives": "1,2,4",
+        "percentage" : "75"
+      }
+    ],
+    "RANDOMCHECK" : []
+}
