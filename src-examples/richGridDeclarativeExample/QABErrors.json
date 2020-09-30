@@ -1,4 +1,12 @@
 {
+    "WaiversRegex": {
+      "LBDB-607": "Warning:(.*) %FAM_NAME%%DRIVE_NAME% .*is so and so pin %PIN% is changed.(LBDB-607)",
+      "LBDB-608": "Warning:(.*) %CELL_NAME% .*is so and so pin is changed.(LBDB-608)",
+      "LBDB-609": "Warning:(.*) %CELL_NAME% .*is so and so pin is changed.(LBDB-609)",
+      "LBDB-1054": "Warning:(.*) %CELL_NAME% .*is so and so pin is changed.(LBDB-1054)",
+      "LBDB-849": "Warning:(.*) %CELL_NAME% .*is so and so pin is changed.(LBDB-849)"
+    },
+
     "LIBCHECKER": [
       {
         "id": 1,
@@ -35,7 +43,7 @@
       {
         "id": 1,
         "familyname": "INV",
-        "error_code": "LBDB-607",
+        "error_code": "LBDB-1054",
         "all_drives": "1,2,4,8",
         "fail_drives": "1,2",
         "percentage" : "50"

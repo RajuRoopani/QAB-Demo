@@ -15,6 +15,11 @@ export default class ErrorRowDataFactory {
         return rowData;
     }
 
+    getWaiversRegex() {
+        let waivers = QABErrors["WaiversRegex"];
+        return waivers;
+    }
+
     createRandomPhoneNumber() {
         let result = '+';
         for (let i = 0; i < 12; i++) {

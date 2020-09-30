@@ -11,7 +11,7 @@ import SkillsFilter from './SkillsFilter.jsx';
 import ProficiencyFilter from './ProficiencyFilter.jsx';
 import HeaderGroupComponent from './HeaderGroupComponent.jsx';
 import SortableHeaderComponent from './SortableHeaderComponent.jsx';
-
+import * as _ from "lodash";
 import "./RichGridDeclarativeExample.css";
 // for enterprise features
 import {AllModules} from "@ag-grid-enterprise/all-modules";
@@ -27,6 +27,7 @@ export default class RichGridDeclarativeExample extends Component {
             quickFilterText: null,
             sideBar: false,
             rowData: new ErrorRowDataFactory().createRowData(),
+            waiversRegex : new ErrorRowDataFactory().getWaiversRegex(),
             rowCount: null,
             icons: {
                 columnRemoveFromGroup: '<i class="fa fa-times"/>',
@@ -88,14 +89,19 @@ export default class RichGridDeclarativeExample extends Component {
         }
         this.selectedRows.forEach(element => {
             const rowD = this.state.rowData[element];
+            const allDrives = rowD.all_drives;
+            const allDriveArr = allDrives && allDrives.split(',')
+            const allDriverReg = _.isEmpty(allDriveArr)?"" : "_.("+allDriveArr.join('|') +")";
             if (waiverMap[rowD.error_code] != undefined) {
-                waiverMap[rowD.error_code]+= "|"+rowD.familyname;
+                waiverMap[rowD.error_code]+= "|"+rowD.familyname+ allDriverReg;
             }else {
-                waiverMap[rowD.error_code]= rowD.familyname;
+                waiverMap[rowD.error_code]= rowD.familyname + allDriverReg
             }
         });
+        const waivers = this.state.waiversRegex;
         for( var key in waiverMap) {
-            waiver += ".*" +key + ".*" + waiverMap[key] + ".*\n\n";
+            const regex = waivers[key]
+            waiver += regex.replaceAll("%CELL_NAME%", waiverMap[key])
         };
         
         this.setState({waivers: waiver});
@@ -107,7 +113,8 @@ export default class RichGridDeclarativeExample extends Component {
 
     onRefreshData = () => {
         this.setState({
-            rowData: new ErrorRowDataFactory().createRowData()
+            rowData: new ErrorRowDataFactory().createRowData(),
+            waiversRegex : new ErrorRowDataFactory().getWaiversRegex()
         });
     };
 
