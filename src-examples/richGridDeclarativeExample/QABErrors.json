@@ -1,10 +1,10 @@
 {
     "WaiversRegex": {
-      "LBDB-607": "Warning:(.*) %FAM_NAME%%DRIVE_NAME% .*is so and so pin %PIN% is changed.(LBDB-607)",
-      "LBDB-608": "Warning:(.*) %CELL_NAME% .*is so and so pin is changed.(LBDB-608)",
-      "LBDB-609": "Warning:(.*) %CELL_NAME% .*is so and so pin is changed.(LBDB-609)",
-      "LBDB-1054": "Warning:(.*) %CELL_NAME% .*is so and so pin is changed.(LBDB-1054)",
-      "LBDB-849": "Warning:(.*) %CELL_NAME% .*is so and so pin is changed.(LBDB-849)"
+      "LBDB-607": "Warning:(.*) %CELL_NAME% .*is so and so pin %PIN% is changed.\\(LBDB-607\\)",
+      "LBDB-608": "Warning:(.*) %CELL_NAME% .*is so and so pin is changed.\\(LBDB-608\\)",
+      "LBDB-609": "Warning:(.*) %CELL_NAME% .*is so and so pin is changed.\\(LBDB-609\\)",
+      "LBDB-1054": "Warning:(.*) %CELL_NAME% .*is so and so pin is changed.\\(LBDB-1054\\)",
+      "LBDB-849": "Warning:(.*) %CELL_NAME% .*is so and so pin is changed.\\(LBDB-849\\)"
     },
 
     "LIBCHECKER": [

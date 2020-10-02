@@ -80,7 +80,8 @@ export default class RichGridDeclarativeExample extends Component {
 
     generateWaivers = ()=> {
         let waiver =  "";
-        let waiverMap = {};
+        let cellNameMap = {};
+        let pinNameMap ={};
 
         if (!this.selectedRows || this.selectedRows.size === 0) {
             waiver = "********* SELECT ROWS TO GENERATE WAIVER *******";
@@ -92,16 +93,19 @@ export default class RichGridDeclarativeExample extends Component {
             const allDrives = rowD.all_drives;
             const allDriveArr = allDrives && allDrives.split(',')
             const allDriverReg = _.isEmpty(allDriveArr)?"" : "_.("+allDriveArr.join('|') +")";
-            if (waiverMap[rowD.error_code] != undefined) {
-                waiverMap[rowD.error_code]+= "|"+rowD.familyname+ allDriverReg;
+            
+            if (cellNameMap[rowD.error_code] != undefined) {
+                cellNameMap[rowD.error_code]+= "|"+rowD.familyname+ allDriverReg;
+                pinNameMap[rowD.error_code] += "|"+rowD.percentage;
             }else {
-                waiverMap[rowD.error_code]= rowD.familyname + allDriverReg
+                cellNameMap[rowD.error_code]= rowD.familyname + allDriverReg;
+                pinNameMap[rowD.error_code] = rowD.percentage;
             }
         });
         const waivers = this.state.waiversRegex;
-        for( var key in waiverMap) {
+        for( var key in cellNameMap) {
             const regex = waivers[key]
-            waiver += regex.replaceAll("%CELL_NAME%", waiverMap[key])
+            waiver += "\n\n"+regex.replaceAll("%CELL_NAME%", cellNameMap[key]).replaceAll("%PIN%",pinNameMap[key] );
         };
         
         this.setState({waivers: waiver});
